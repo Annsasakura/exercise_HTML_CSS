@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+img {
+  border-radius: 50%;
+  width: 8rem;
+}
+
+body {
+  color: #0a0908;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "header header"
+    "main aside"
+    "footer footer";
+}
+
+/*HEADER*/
+
+header {
+  background-color: #f8f7ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: header;
+}
+
+header h1 {
+  margin-top: 1rem;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+header ul {
+  display: flex;
+  margin: 1rem 0 2rem 0;
+  list-style: none;
+}
+
+header a {
+  text-decoration: none;
+  margin: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  font-weight: 400;
+  border-radius: 35%;
+}
+
+header a.diferencia {
+  background-color: #b8b8ff;
+  color: white;
+}
+
+/*ASIDE*/
+
+aside {
+  grid-area: aside;
+}
+aside ul {
+  margin: 0.7rem;
+  list-style: none;
+}
+
+aside ul li {
+  display: block;
+  padding: 0.5rem;
+}
+
+aside ul li ul li a {
+  padding: 0 0 1rem 1rem;
+  text-decoration: none;
+  background-size: 2rem;
+  background-repeat: no-repeat;
+  text-indent: -5000px;
+  display: block;
+}
+
+aside li:nth-child(1) a {
+  background-image: url("../img/facebook.svg");
+}
+
+aside li:nth-child(2) a {
+  background-image: url("../img/instagram.svg");
+}
+
+/*MAIN*/
+
+main {
+  grid-area: main;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+main h2 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+main h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+section {
+  margin: 1rem;
+}
+
+section > section {
+  margin: 1rem;
+}
+
+section:nth-child(1) section {
+  display: flex;
+  flex-direction: column;
+}
+
+section:nth-child(1) section ul {
+  margin-left: 5rem;
+  padding: 0.2rem;
+  text-align: left;
+}
+
+section:nth-child(1) section ul li {
+  margin: 0.2rem 0;
+}
+
+ul.comida li:hover {
+  list-style: "🍜 ";
+}
+ul.peliculas li:hover {
+  list-style: "🎬 ";
+}
+ul.canciones li:hover {
+  list-style: "🎼 ";
+}
+ul.animales li:hover {
+  list-style: "😸 ";
+}
+
+table {
+  text-align: center;
+}
+
+table th {
+  background-color: #0a0908;
+  color: white;
+  padding: 0.3rem;
+  font-weight: 600;
+}
+
+table td {
+  padding: 0.3rem;
+}
+
+table tr:nth-child(odd) {
+  background-color: #b8b8ff;
+}
+table tr:nth-child(even) {
+  background-color: lightcoral;
+}
+
+form input:required {
+  border-color: red;
+}
+
+form fieldset {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 0;
+}
+
+form legend {
+  font-weight: 600;
+}
+
+input {
+  margin: 0.2rem;
+}
+
+button {
+  background: linear-gradient(180deg, #65bce8 0%, #495867 100%);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:active {
+  background: linear-gradient(180deg, #495867 0%, #65bce8 100%);
+}
+
+/*FOOTER*/
+
+footer {
+  grid-area: footer;
+  background-color: #495867;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h2 {
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  margin-top: 1.5rem;
+}
+
+footer ul {
+  display: flex;
+  margin: 1rem 0 2rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+  margin: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  font-weight: 400;
+  border-radius: 35%;
+  color: white;
+}
